@@ -1,0 +1,19 @@
+{
+    "name": "assaignment/001",
+    "description": "This is a assaignment description",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "MH TOUFIK",
+            "email": "toufikforyou@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
