@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 9: Colorful Buttons</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f5f5f5;
+        margin: 0;
+      }
+
+      .button-container {
+        display: flex;
+        gap: 20px;
+      }
+
+      .btn {
+        padding: 15px 30px;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn1 {
+        background-color: #e63946;
+      }
+
+      .btn2 {
+        background-color: #370bc6;
+      }
+
+      .btn3 {
+        background-color: #048172;
+      }
+
+      .btn4 {
+        background-color: #f37a17;
+      }
+
+      .btn1:hover {
+        background-color: #da1136;
+        transform: scale(1.05);
+      }
+
+      .btn2:hover {
+        background-color: #8d018d;
+        transform: scale(1.05);
+      }
+
+      .btn3:hover {
+        background-color: #48c9b0;
+        transform: scale(1.05);
+      }
+
+      .btn4:hover {
+        background-color: #ffb703;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="button-container">
+      <button class="btn btn1">Button 1</button>
+      <button class="btn btn2">Button 2</button>
+      <button class="btn btn3">Button 3</button>
+      <button class="btn btn4">Button 4</button>
+    </div>
+  </body>
+</html>
