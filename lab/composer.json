@@ -1,0 +1,21 @@
+{
+  "name": "lab/lab",
+  "type": "project",
+  "description": "description",
+  "keywords": [],
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "MH TOUFIK",
+      "email": "toufikforyou@gmail.com"
+    }
+  ],
+  "require": {},
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "app//"
+    }
+  }
+}
