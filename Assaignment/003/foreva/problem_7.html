@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility Toggler</title>
+</head>
+
+<body>
+    <h1>Content Visibility Controller</h1>
+
+    <div id="contentBox">
+        <h2>Important Information</h2>
+        <p>This section contains important details about the application.
+            You can toggle its visibility using the button below.</p>
+        <p>Click the toggle button to show or hide this content dynamically.</p>
+    </div>
+
+    <br>
+    <button id="toggleBtn">Toggle Content</button>
+
+    <script>
+        let isVisible = true;
+
+        document.getElementById('toggleBtn').addEventListener('click', function () {
+            const content = document.getElementById('contentBox');
+
+            if (isVisible) {
+                content.style.display = 'none';
+                this.textContent = 'Show Content';
+            } else {
+                content.style.display = 'block';
+                this.textContent = 'Hide Content';
+            }
+
+            isVisible = !isVisible;
+        });
+    </script>
+</body>
+
+</html>

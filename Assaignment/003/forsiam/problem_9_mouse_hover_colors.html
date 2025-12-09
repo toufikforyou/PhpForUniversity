@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Hover Colors</title>
+</head>
+
+<body>
+    <h1>Mouse Hover Color Modification</h1>
+
+    <div id="colorBox" onmouseover="applyHoverColors()" onmouseout="removeHoverColors()">
+        <h2>Hover Zone</h2>
+        <p>Move your mouse pointer over this region to activate color changes.</p>
+        <p>Colors will revert automatically when you move away.</p>
+    </div>
+
+    <script>
+        function applyHoverColors() {
+            const box = document.getElementById('colorBox');
+            box.style.backgroundColor = '#FFDDC1';
+            box.style.color = '#D2691E';
+        }
+
+        function removeHoverColors() {
+            const box = document.getElementById('colorBox');
+            box.style.backgroundColor = 'white';
+            box.style.color = 'black';
+        }
+    </script>
+</body>
+
+</html>

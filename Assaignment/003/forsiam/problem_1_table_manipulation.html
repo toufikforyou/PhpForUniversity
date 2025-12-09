@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Manipulation</title>
+</head>
+
+<body>
+    <h1>Table Row Insertion</h1>
+
+    <table border="1" id="employeeTable">
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Department</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>E001</td>
+                <td>Engineering</td>
+                <td>$75,000</td>
+            </tr>
+            <tr>
+                <td>E002</td>
+                <td>Marketing</td>
+                <td>$65,000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <button onclick="insertNewRow()">Insert Employee</button>
+
+    <script>
+        function insertNewRow() {
+            const table = document.getElementById('employeeTable');
+            const newRow = table.insertRow(-1);
+
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+
+            cell1.innerHTML = 'E003';
+            cell2.innerHTML = 'Sales';
+            cell3.innerHTML = '$70,000';
+        }
+    </script>
+</body>
+
+</html>

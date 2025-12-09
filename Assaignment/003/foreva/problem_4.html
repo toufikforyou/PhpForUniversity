@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Generator</title>
+</head>
+
+<body>
+    <h1>Dynamic Card Generator</h1>
+
+    <div id="cardWrapper"></div>
+
+    <script>
+        const cards = [
+            { heading: 'Feature 1', description: 'Advanced analytics dashboard' },
+            { heading: 'Feature 2', description: 'Real-time data synchronization' },
+            { heading: 'Feature 3', description: 'Cloud storage integration' },
+            { heading: 'Feature 4', description: 'Multi-user collaboration' },
+            { heading: 'Feature 5', description: 'Mobile responsive design' },
+            { heading: 'Feature 6', description: 'Automated backup system' }
+        ];
+
+        const wrapper = document.getElementById('cardWrapper');
+
+        cards.forEach(function (item, index) {
+            const cardDiv = document.createElement('div');
+            cardDiv.className = 'feature-card';
+            cardDiv.setAttribute('data-card-id', index + 1);
+
+            const heading = document.createElement('h2');
+            heading.textContent = item.heading;
+
+            const description = document.createElement('p');
+            description.textContent = item.description;
+
+            cardDiv.appendChild(heading);
+            cardDiv.appendChild(description);
+            wrapper.appendChild(cardDiv);
+
+            const separator = document.createElement('hr');
+            wrapper.appendChild(separator);
+        });
+    </script>
+</body>
+
+</html>

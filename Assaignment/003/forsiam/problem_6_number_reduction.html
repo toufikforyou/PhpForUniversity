@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Reduction</title>
+</head>
+
+<body>
+    <h1>Click-Based Number Reduction</h1>
+
+    <h2>Value: <span id="valueDisplay">1000</span></h2>
+
+    <button onclick="reduceValue()">Reduce by 5</button>
+
+    <script>
+        function reduceValue() {
+            const display = document.getElementById('valueDisplay');
+            let num = parseInt(display.textContent);
+            num = num - 5;
+            display.textContent = num;
+
+            if (num <= 0) {
+                alert('Value has reached zero or below!');
+            }
+        }
+    </script>
+</body>
+
+</html>

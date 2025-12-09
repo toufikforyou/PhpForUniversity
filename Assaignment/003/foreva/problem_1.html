@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table Row Addition</title>
+</head>
+
+<body>
+    <h1>Dynamic Table Row Management</h1>
+
+    <table border="1" id="dataTable">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <tr>
+                <td>Laptop</td>
+                <td>$999</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Mouse</td>
+                <td>$25</td>
+                <td>50</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <button id="addRowBtn">Add Product Row</button>
+
+    <script>
+        document.getElementById('addRowBtn').addEventListener('click', function () {
+            const tbody = document.getElementById('tableBody');
+            const newRow = document.createElement('tr');
+
+            newRow.innerHTML = `
+                <td>Keyboard</td>
+                <td>$150</td>
+                <td>20</td>
+            `;
+
+            tbody.appendChild(newRow);
+        });
+    </script>
+</body>
+
+</html>

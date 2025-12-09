@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Standardization</title>
+</head>
+
+<body>
+    <h1>Button Style Standardization</h1>
+
+    <button>Login</button>
+    <button>Register</button>
+    <button>Download</button>
+    <button>Upload</button>
+    <button>Search</button>
+
+    <br><br>
+    <button onclick="standardizeButtons()">Standardize All Buttons</button>
+
+    <script>
+        function standardizeButtons() {
+            const buttonElements = document.querySelectorAll('button');
+            let buttonCount = 0;
+
+            buttonElements.forEach(function (btn) {
+                btn.setAttribute('class', 'standard-btn');
+                buttonCount++;
+            });
+
+            console.log('Standardized ' + buttonCount + ' buttons');
+            alert('All buttons have been standardized!');
+        }
+    </script>
+</body>
+
+</html>

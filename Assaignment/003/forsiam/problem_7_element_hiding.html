@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Hiding</title>
+</head>
+
+<body>
+    <h1>Section/Paragraph Hiding Mechanism</h1>
+
+    <section id="infoSection">
+        <h2>Welcome Section</h2>
+        <p>This is an informational section that can be hidden or shown dynamically.</p>
+        <p>Use the control button below to manage visibility of this content.</p>
+    </section>
+
+    <br>
+    <button onclick="hideShowSection()">Hide/Show Section</button>
+
+    <script>
+        function hideShowSection() {
+            const section = document.getElementById('infoSection');
+            const currentDisplay = window.getComputedStyle(section).display;
+
+            if (currentDisplay === 'none') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

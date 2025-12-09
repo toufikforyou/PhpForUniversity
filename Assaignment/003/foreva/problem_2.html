@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Builder</title>
+</head>
+
+<body>
+    <h1>Dynamic List Builder</h1>
+
+    <ul id="taskList">
+        <li>Complete homework</li>
+        <li>Read a book</li>
+        <li>Exercise</li>
+    </ul>
+
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button id="addBtn">Add Task</button>
+
+    <script>
+        const addButton = document.getElementById('addBtn');
+        const inputField = document.getElementById('taskInput');
+
+        addButton.addEventListener('click', addTask);
+
+        inputField.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                addTask();
+            }
+        });
+
+        function addTask() {
+            const taskText = inputField.value.trim();
+
+            if (taskText !== '') {
+                const taskList = document.getElementById('taskList');
+                const listItem = document.createElement('li');
+                listItem.textContent = taskText;
+                taskList.appendChild(listItem);
+                inputField.value = '';
+                inputField.focus();
+            }
+        }
+    </script>
+</body>
+
+</html>

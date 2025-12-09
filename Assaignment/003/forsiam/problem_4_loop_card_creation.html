@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Card Creation</title>
+</head>
+
+<body>
+    <h1>Multiple Card Creation with Loop</h1>
+
+    <div id="cardsContainer"></div>
+
+    <script>
+        const cardInfo = [
+            { name: 'Service A', detail: 'Web development services' },
+            { name: 'Service B', detail: 'Mobile app development' },
+            { name: 'Service C', detail: 'UI/UX design services' },
+            { name: 'Service D', detail: 'Digital marketing solutions' },
+            { name: 'Service E', detail: 'Cloud infrastructure setup' }
+        ];
+
+        const container = document.getElementById('cardsContainer');
+        let index = 0;
+
+        while (index < cardInfo.length) {
+            const cardElement = document.createElement('div');
+            cardElement.className = 'service-card';
+
+            const nameElement = document.createElement('h3');
+            nameElement.innerText = cardInfo[index].name;
+
+            const detailElement = document.createElement('p');
+            detailElement.innerText = cardInfo[index].detail;
+
+            cardElement.appendChild(nameElement);
+            cardElement.appendChild(detailElement);
+            container.appendChild(cardElement);
+
+            const lineBreak = document.createElement('br');
+            container.appendChild(lineBreak);
+
+            index++;
+        }
+    </script>
+</body>
+
+</html>

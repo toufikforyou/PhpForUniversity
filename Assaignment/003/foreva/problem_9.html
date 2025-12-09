@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Color Effects</title>
+</head>
+
+<body>
+    <h1>Hover Color Transformation</h1>
+
+    <div id="interactiveBox">
+        <h2>Interactive Element</h2>
+        <p>Move your cursor over this area to experience dynamic color changes.</p>
+        <p>The colors will automatically revert when you move away.</p>
+    </div>
+
+    <script>
+        const box = document.getElementById('interactiveBox');
+
+        box.addEventListener('mouseenter', function () {
+            this.style.backgroundColor = '#FFE5B4';
+            this.style.color = '#8B4513';
+            this.style.transition = 'all 0.3s ease';
+        });
+
+        box.addEventListener('mouseleave', function () {
+            this.style.backgroundColor = '';
+            this.style.color = '';
+        });
+    </script>
+</body>
+
+</html>

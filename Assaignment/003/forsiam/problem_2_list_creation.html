@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Creation</title>
+</head>
+
+<body>
+    <h1>Unordered List Manager</h1>
+
+    <ul id="shoppingList">
+        <li>Milk</li>
+        <li>Bread</li>
+        <li>Eggs</li>
+    </ul>
+
+    <input type="text" id="newItem" placeholder="Add shopping item">
+    <button onclick="appendItem()">Add to List</button>
+    <button onclick="clearInput()">Clear</button>
+
+    <script>
+        function appendItem() {
+            const itemValue = document.getElementById('newItem').value;
+
+            if (itemValue) {
+                const ul = document.getElementById('shoppingList');
+                const li = document.createElement('li');
+                li.appendChild(document.createTextNode(itemValue));
+                ul.appendChild(li);
+                clearInput();
+            } else {
+                alert('Please enter an item!');
+            }
+        }
+
+        function clearInput() {
+            document.getElementById('newItem').value = '';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Color Change</title>
+</head>
+<body>
+    <h1>Change Text/Background Color on Hover</h1>
+    
+    <div id="hoverBox" 
+         onmouseover="changeColors()" 
+         onmouseout="resetColors()">
+        <h2>Hover over this box!</h2>
+        <p>Move your mouse over this area to see the color change.</p>
+    </div>
+    
+    <script>
+        function changeColors() {
+            const box = document.getElementById('hoverBox');
+            box.style.backgroundColor = 'lightblue';
+            box.style.color = 'darkblue';
+        }
+        
+        function resetColors() {
+            const box = document.getElementById('hoverBox');
+            box.style.backgroundColor = '';
+            box.style.color = '';
+        }
+    </script>
+</body>
+</html>

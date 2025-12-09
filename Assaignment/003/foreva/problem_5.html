@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Uniformity</title>
+</head>
+
+<body>
+    <h1>Uniform Button Styling</h1>
+
+    <button>Submit</button>
+    <button>Cancel</button>
+    <button>Save</button>
+    <button>Delete</button>
+    <button>Refresh</button>
+
+    <br><br>
+    <button id="uniformBtn">Make Buttons Uniform</button>
+
+    <script>
+        document.getElementById('uniformBtn').addEventListener('click', function () {
+            const allButtons = document.getElementsByTagName('button');
+
+            for (let i = 0; i < allButtons.length; i++) {
+                allButtons[i].classList.add('btn-standard');
+            }
+
+            console.log('All buttons now have the "btn-standard" class');
+        });
+    </script>
+</body>
+
+</html>

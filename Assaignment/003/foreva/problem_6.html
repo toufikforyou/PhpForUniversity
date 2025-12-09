@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Decrement</title>
+</head>
+
+<body>
+    <h1>Number Decrement System</h1>
+
+    <h2>Score: <span id="scoreDisplay">500</span></h2>
+
+    <button id="decrementBtn">Decrease Score</button>
+    <button id="resetBtn">Reset to 500</button>
+
+    <script>
+        let currentScore = 500;
+
+        document.getElementById('decrementBtn').addEventListener('click', function () {
+            currentScore -= 10;
+            document.getElementById('scoreDisplay').textContent = currentScore;
+        });
+
+        document.getElementById('resetBtn').addEventListener('click', function () {
+            currentScore = 500;
+            document.getElementById('scoreDisplay').textContent = currentScore;
+        });
+    </script>
+</body>
+
+</html>
