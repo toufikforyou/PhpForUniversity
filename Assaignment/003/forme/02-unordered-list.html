@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Unordered List</title>
+</head>
+<body>
+    <h1>Create an Unordered List and Add Items</h1>
+    
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    
+    <input type="text" id="itemInput" placeholder="Enter new item">
+    <button onclick="addListItem()">Add Item</button>
+    
+    <script>
+        function addListItem() {
+            const input = document.getElementById('itemInput');
+            const list = document.getElementById('myList');
+            
+            if (input.value.trim() !== '') {
+                const newItem = document.createElement('li');
+                newItem.textContent = input.value;
+                list.appendChild(newItem);
+                input.value = '';
+            }
+        }
+    </script>
+</body>
+</html>

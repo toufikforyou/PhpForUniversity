@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Toggle</title>
+</head>
+
+<body>
+    <h1>Hover-Based Font Size Toggle</h1>
+
+    <p id="toggleText" onmouseover="enlargeFont()" onmouseout="shrinkFont()">
+        Hover over this text block to see the font size toggle in action.
+        The size will automatically adjust when you move your cursor over or away from this paragraph.
+        This provides an interactive user experience!
+    </p>
+
+    <script>
+        function enlargeFont() {
+            document.getElementById('toggleText').style.fontSize = '26px';
+        }
+
+        function shrinkFont() {
+            document.getElementById('toggleText').style.fontSize = '14px';
+        }
+    </script>
+</body>
+
+</html>

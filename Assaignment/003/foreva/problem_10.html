@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Size Switcher</title>
+</head>
+
+<body>
+    <h1>Font Size Toggle Effect</h1>
+
+    <p id="dynamicText">
+        Place your cursor over this paragraph to see the font size increase.
+        The text will return to normal size when you move your cursor away.
+        This creates an interactive reading experience!
+    </p>
+
+    <script>
+        const textElement = document.getElementById('dynamicText');
+
+        textElement.addEventListener('mouseenter', function () {
+            this.style.fontSize = '28px';
+            this.style.transition = 'font-size 0.2s';
+        });
+
+        textElement.addEventListener('mouseleave', function () {
+            this.style.fontSize = '18px';
+        });
+    </script>
+</body>
+
+</html>

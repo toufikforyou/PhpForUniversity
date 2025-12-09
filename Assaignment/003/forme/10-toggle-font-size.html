@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Font Size on Hover</title>
+</head>
+<body>
+    <h1>Toggle Between Font Sizes on Hover</h1>
+    
+    <p id="hoverText" 
+       onmouseover="increaseFontSize()" 
+       onmouseout="resetFontSize()">
+        Hover your mouse over this text to see the font size change!
+        This demonstrates toggling between different font sizes.
+    </p>
+    
+    <script>
+        function increaseFontSize() {
+            const text = document.getElementById('hoverText');
+            text.style.fontSize = '24px';
+        }
+        
+        function resetFontSize() {
+            const text = document.getElementById('hoverText');
+            text.style.fontSize = '16px';
+        }
+    </script>
+</body>
+</html>

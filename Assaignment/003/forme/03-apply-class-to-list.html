@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Class to List Items</title>
+    <style>
+        .highlight-item {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Apply the Same Class to All List Items</h1>
+
+    <ul id="myList">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+        <li>Grape</li>
+        <li>Mango</li>
+    </ul>
+
+    <button onclick="applyClassToAll()">Apply Class to All Items</button>
+
+    <script>
+        function applyClassToAll() {
+            const listItems = document.querySelectorAll('#myList li');
+
+            listItems.forEach(function (item) {
+                item.className = 'highlight-item';
+            });
+
+            alert('Class "highlight-item" has been applied to all list items!');
+        }
+    </script>
+</body>
+
+</html>

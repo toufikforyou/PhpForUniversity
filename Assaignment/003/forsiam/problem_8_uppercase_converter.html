@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uppercase Converter</title>
+</head>
+
+<body>
+    <h1>Keypress Uppercase Converter</h1>
+
+    <label for="textField">Type your text:</label><br>
+    <input type="text" id="textField" placeholder="Text will auto-convert to uppercase" onkeypress="convertText(event)">
+
+    <script>
+        function convertText(event) {
+            setTimeout(function () {
+                const field = document.getElementById('textField');
+                field.value = field.value.toUpperCase();
+            }, 1);
+        }
+    </script>
+</body>
+
+</html>

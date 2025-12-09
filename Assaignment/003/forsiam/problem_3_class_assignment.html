@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Assignment</title>
+</head>
+
+<body>
+    <h1>List Item Class Assignment</h1>
+
+    <ul id="cityList">
+        <li>Paris</li>
+        <li>Tokyo</li>
+        <li>Sydney</li>
+        <li>Cairo</li>
+        <li>Mumbai</li>
+    </ul>
+
+    <button onclick="assignClass()">Assign Class to Items</button>
+
+    <script>
+        function assignClass() {
+            const list = document.getElementById('cityList');
+            const items = list.getElementsByTagName('li');
+
+            let count = 0;
+            while (count < items.length) {
+                items[count].setAttribute('class', 'city-item');
+                count++;
+            }
+
+            alert(count + ' items have been assigned the "city-item" class');
+        }
+    </script>
+</body>
+
+</html>

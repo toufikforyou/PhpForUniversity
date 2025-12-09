@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Same Button Class</title>
+</head>
+<body>
+    <h1>Make All Buttons Look the Same</h1>
+    
+    <button>Button One</button>
+    <button>Button Two</button>
+    <button>Button Three</button>
+    <button>Button Four</button>
+    <button>Button Five</button>
+    
+    <br><br>
+    <button onclick="makeButtonsSame()">Apply Same Class to All Buttons</button>
+    
+    <script>
+        function makeButtonsSame() {
+            const buttons = document.querySelectorAll('button');
+            
+            buttons.forEach(function(button) {
+                button.className = 'uniform-button';
+            });
+            
+            alert('Class "uniform-button" has been applied to all buttons!');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uppercase Input on Keypress</title>
+</head>
+<body>
+    <h1>Convert Input to Uppercase on Keypress</h1>
+    
+    <label for="textInput">Type something:</label><br>
+    <input type="text" id="textInput" placeholder="Type here..." onkeyup="convertToUppercase()">
+    
+    <script>
+        function convertToUppercase() {
+            const input = document.getElementById('textInput');
+            input.value = input.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>
