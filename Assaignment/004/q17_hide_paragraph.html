@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 17: Hide Paragraph</title>
+</head>
+<body>
+
+    <p id="textToHide">This is a paragraph to hide.</p>
+    
+    <button id="hideBtn">Hide Paragraph</button>
+
+    <script>
+        document.getElementById("hideBtn").addEventListener("click", function() {
+            let paragraph = document.getElementById("textToHide");
+            
+            paragraph.style.display = "none";
+        });
+    </script>
+
+</body>
+</html>

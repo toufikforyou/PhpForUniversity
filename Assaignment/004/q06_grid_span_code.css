@@ -1,0 +1,5 @@
+.grid-item {
+    grid-column: span 3;
+    
+    grid-row: span 2;
+}

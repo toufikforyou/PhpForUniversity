@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 13: Dynamic List</title>
+</head>
+<body>
+
+    <button id="addBtn">Add Task</button>
+    <ul id="taskList">
+    </ul>
+
+    <script>
+        let count = 1;
+        const button = document.getElementById('addBtn');
+        const list = document.getElementById('taskList');
+
+        button.addEventListener('click', function() {
+            let newItem = document.createElement('li');
+
+            newItem.textContent = "Task " + count;
+
+            list.appendChild(newItem);
+
+            count++;
+        });
+    </script>
+
+</body>
+</html>

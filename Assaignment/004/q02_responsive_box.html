@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2: Responsive Box</title>
+    <style>
+        .responsive-box {
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            border: 1px solid #333;
+        }
+
+        .responsive-box {
+            background-color: lightcoral;
+        }
+
+        @media (max-width: 900px) {
+            .responsive-box {
+                background-color: lightgreen;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .responsive-box {
+                background-color: lightblue;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="responsive-box">
+        Responsive Box
+    </div>
+
+</body>
+</html>
