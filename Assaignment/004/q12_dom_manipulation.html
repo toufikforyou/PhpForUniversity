@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 12: DOM Manipulation</title>
+</head>
+<body>
+
+    <div id="main-container">
+        <div class="card">Old Text 1</div>
+        <div class="card">Old Text 2</div>
+        <div class="card">Old Text 3</div>
+    </div>
+
+    <script>
+        let cards = document.querySelectorAll(".card");
+
+        cards.forEach((card, index) => {
+            card.textContent = "Card " + (index + 1);
+
+            card.style.border = "3px dashed red";
+            
+            card.style.margin = "10px";
+            card.style.padding = "10px";
+        });
+
+        let newParagraph = document.createElement("p");
+        newParagraph.textContent = "New Paragraph";
+        newParagraph.style.fontSize = "18px";
+
+        document.getElementById("main-container").appendChild(newParagraph);
+    </script>
+
+</body>
+</html>

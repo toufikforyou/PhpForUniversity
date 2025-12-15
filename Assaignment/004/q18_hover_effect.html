@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 18: Hover Effect</title>
+    <style>
+        #hoverBox {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="hoverBox">Hover over me!</div>
+
+    <script>
+        let box = document.getElementById("hoverBox");
+
+        box.addEventListener("mouseover", function() {
+            box.style.color = "red";
+            box.style.backgroundColor = "lightgray";
+        });
+
+        box.addEventListener("mouseout", function() {
+            box.style.color = "black";
+            box.style.backgroundColor = "transparent";
+        });
+    </script>
+
+</body>
+</html>
